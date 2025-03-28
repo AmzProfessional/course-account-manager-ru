@@ -36,7 +36,7 @@
 - **EAN (European Article Number)** — міжнародний стандарт, 13 цифр.  
 - **ISBN (International Standard Book Number)** — для книг.  
 
-![[Pasted image 20250303163145.png]]
+![[Pasted-image-20250303163145.png]]
 
 
 - **Як використовувати:**  

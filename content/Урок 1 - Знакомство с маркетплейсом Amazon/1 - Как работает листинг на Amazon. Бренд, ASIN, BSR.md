@@ -46,7 +46,7 @@
 
 Home & Kitchen › Kitchen & Dining › Bakeware › Bakeware Sets
 
-![[Pasted image 20250312140333.png]]
+![[Pasted-image-20250312140333.png]]
 
 Ця система допомагає швидко орієнтуватися в асортименті Amazon і знаходити потрібні товари.
 
@@ -60,7 +60,7 @@ Home & Kitchen › Kitchen & Dining › Bakeware › Bakeware Sets
 - Кожна категорія має свій BSR, тому рейтинг одного товару не можна порівнювати з товарами з інших категорій.
 - Високий BSR означає, що товар погано продається.
 
-![[Pasted image 20250317100318.png]]
+![[Pasted-image-20250317100318.png]]
 
 ### **Що впливає на BSR?**
 
@@ -70,7 +70,7 @@ Home & Kitchen › Kitchen & Dining › Bakeware › Bakeware Sets
 4. **Маркетинг і реклама** – платні кампанії (Amazon Sponsored Products) підвищують видимість.
 5. **Оптимізація сторінки товару** – якісні фото, детальний опис і ключові слова покращують конверсію.
 
-![[Pasted image 20250317100712.png]]
+![[Pasted-image-20250317100712.png]]
 
    > [!warning] **Низька ціна не завжди є запорукою низького BSR.**
 
