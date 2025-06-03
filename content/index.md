@@ -1,6 +1,6 @@
 # **Добро пожаловать на вводный курс компании AmzProfessional!**
 
-### Україномовна версія: [Вступний курс для Account Manager](https://andriiedtech.github.io/course-account-manager-ua/)
+### Україномовна версія: [Вступний курс для Account Manager](https://amzprofessional.github.io/course-account-manager-ua/)
 
 ### Мы рады, что вы заинтересованы в вакансии **Account Manager** в компании **AmzProfessional** и готовы пройти первый этап обучения. Этот курс поможет вам ознакомиться с основами работы на маркетплейсе Amazon и нашей компанией.
 
