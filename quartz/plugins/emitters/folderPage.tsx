@@ -5,7 +5,6 @@ import BodyConstructor from "../../components/Body"
 import { pageResources, renderPage } from "../../components/renderPage"
 import { ProcessedContent, QuartzPluginData, defaultProcessedContent } from "../vfile"
 import { FullPageLayout } from "../../cfg"
-import path from "path"
 import {
   FullSlug,
   SimpleSlug,
@@ -90,11 +89,16 @@ function computeFolderInfo(
 }
 
 function _getFolders(slug: FullSlug): SimpleSlug[] {
-  var folderName = path.dirname(slug ?? "") as SimpleSlug
+  const dirname = (path: string): string => {
+    const lastSlash = path.lastIndexOf("/")
+    return lastSlash === -1 ? "." : path.substring(0, lastSlash) || "."
+  }
+
+  var folderName = dirname(slug ?? "") as SimpleSlug
   const parentFolderNames = [folderName]
 
   while (folderName !== ".") {
-    folderName = path.dirname(folderName ?? "") as SimpleSlug
+    folderName = dirname(folderName ?? "") as SimpleSlug
     parentFolderNames.push(folderName)
   }
   return parentFolderNames
@@ -104,7 +108,39 @@ export const FolderPage: QuartzEmitterPlugin<Partial<FolderPageOptions>> = (user
   const opts: FullPageLayout = {
     ...sharedPageComponents,
     ...defaultListPageLayout,
-    pageBody: FolderContent({ sort: userOpts?.sort }),
+    pageBody: FolderContent({
+    sort:
+    userOpts?.sort ??
+    ((a, b) => {
+    const getTitle = (x: any) => (x.frontmatter?.title ?? x.slug ?? "").toString()
+    
+    
+    const ta = getTitle(a)
+    const tb = getTitle(b)
+    
+    
+    // перше число будь-де в назві
+    const na = Number(ta.match(/(\d+)/)?.[1] ?? NaN)
+    const nb = Number(tb.match(/(\d+)/)?.[1] ?? NaN)
+    
+    
+    const aHas = !Number.isNaN(na)
+    const bHas = !Number.isNaN(nb)
+    
+    
+    // якщо обидва мають число -> по числу
+    if (aHas && bHas) return na - nb
+    
+    
+    // якщо число є тільки в одного -> він вище
+    if (aHas && !bHas) return -1
+    if (!aHas && bHas) return 1
+    
+    
+    // якщо чисел нема -> по назві
+    return ta.localeCompare(tb, "uk", { numeric: true, sensitivity: "base" })
+    }),
+    }),
     ...userOpts,
   }
 
